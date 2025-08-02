@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Friendship Day - Page 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #ffe9f5, #ffccf9);
+      color: #333;
+      text-align: center;
+    }
+    .title {
+      font-size: 3rem;
+      color: #e91e63;
+      margin-top: 2rem;
+      animation: fadeIn 1s, glow 1.5s infinite alternate; /* Added glow animation */
+    }
+    .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 220px;
+      padding: 0.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeIn 2s, float 3s ease-in-out infinite;
+      perspective: 1000px; /* For 3D effect */
+    }
+    .card:hover {
+      transform: translateY(-10px) rotateY(10deg) rotateX(10deg);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 0.8rem;
+    }
+    .caption {
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+    .message-box {
+      background: white;
+      border-radius: 1rem;
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2.5s;
+    }
+    .heart-icon {
+      font-size: 2rem;
+      color: #ff4081;
+      animation: pulse 1.5s infinite; /* Added pulse animation */
+    }
+    .footer {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      color: #e91e63;
+    }
+    .btn {
+      background: linear-gradient(to right, #ff69b4, #ff1493);
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      transition: background 0.3s ease, transform 0.3s;
+      animation: pulse 1.5s infinite; /* Added pulse animation */
+    }
+    .btn:hover {
+      background: #e91e63;
+      transform: scale(1.1); /* Slightly increase size on hover */
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00; }
+      50% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00; }
+      100% { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00; }
+    }
+    .glowing-stars {
+      animation: glow 1.5s infinite; /* Apply glowing animation */
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Audio -->
+  <audio id="backgroundMusic" loop autoplay>
+    <source src="dil_tu_jaan_tu.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="title">👭 Beautiful Memories 👭</div>
+  <div class="subtitle">Here's to our beautiful journey together! 🦋</div>
+
+  <div class="gallery">
+    <div class="card" data-aos="fade-up"><img src="1.jpg" alt="1"><div class="caption">Joyful Moments 😊</div></div>
+    <div class="card" data-aos="fade-up"><img src="2.jpg" alt="2"><div class="caption">True Friendship 💖</div></div>
+    <div class="card" data-aos="fade-up"><img src="3.jpg" alt="3"><div class="caption">Unbreakable Bond 🌼</div></div>
+  </div>
+
+  <div class="message-box" data-aos="zoom-in">
+    <div class="heart-icon glowing-stars">💗</div>
+    <h2>Dear Harshika,</h2>
+    <p>
+      On this beautiful Friendship Day, I just want to take a moment to express how truly grateful I am to have you in my life. 🌈
+      Your friendship is like a precious gem, shining brightly and bringing joy to my days! 💖
+      I feel so incredibly lucky to call you my bestie! 🥰
+      Here's to all our silly inside jokes, those late-night chats that last until dawn, and the countless magical memories we've created together. ✨
+      Thank you for being your amazing self! Let's continue to make even more unforgettable memories and share endless laughter! 🎉💞
+    </p>
+    <div style="margin-top: 1rem;" class="glowing-stars">⭐️⭐️⭐️⭐️⭐️</div>
+    <a href="memories.html"><button class="btn">More Memories ➡️</button></a>
+  </div>
+
+  <div class="footer">Happy Friendship Day! 🎉💐💞</div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Add glowing effect to the title
+    const title = document.querySelector('.title');
+    title.classList.add('glowing-stars');
+
+    // Optional: Add a click event to the button for fun interaction
+    const btn = document.querySelector('.btn');
+    btn.addEventListener('click', () => {
+      alert('Let\'s create more beautiful memories together! 🎉');
+    });
+
+    // Add a glowing effect to the heart icon
+    const heartIcon = document.querySelector('.heart-icon');
+    heartIcon.classList.add('glowing-stars');
+
+    // Autoplay background music (with user interaction fallback)
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    backgroundMusic.volume = 0.5; // Adjust volume as needed
+
+    // Attempt to play the music
+    const playPromise = backgroundMusic.play();
+
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        // Autoplay started!
+      }).catch(error => {
+        // Autoplay was prevented. Show a play button or message to the user.
+        console.log("Autoplay prevented:", error);
+        // You might want to add a visible play button here if autoplay fails
+      });
+    }
+  </script>
+</body>
+</html>
